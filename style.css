@@ -35,3 +35,16 @@
   .degree-section h2 {
     font-size: 40px;
   }
+ /* Date */
+  .date-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    align-content: center;
+    justify-content: center;
+  }
+  .date {
+    position: relative;
+    display: flex;
+    font-size: 1.8rem;
+  }
