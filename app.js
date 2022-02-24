@@ -75,3 +75,6 @@ let whatDay = function () {
 
 let fullDate = `${whatDay()}, ${date}.${month}.${year}`;
 console.log(fullDate);
+// Placeholder
+const dateHolder = document.querySelector(".date");
+dateHolder.textContent = fullDate;
