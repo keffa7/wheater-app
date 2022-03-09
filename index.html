@@ -1,34 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wheater App</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./app.js" defer></script>
-    <script src="./skycons.js" defer></script>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Wheater app</title>
+  <meta name="description" content="Wheater app">
+  <meta name="author" content="Filip Kefelja">
+    
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="./app.js" defer></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
 <body>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="app-container">
+      <nav>
+      <div class="hamburger-menu">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+    </nav>
+
+    <!-- Overlay-->
+    <div class="overlay">
+      <div class="overlay-box">
+        <img src="./images/sun.svg" alt="sun" class="sun-svg">
+        <div class="sunrise"></div>
+        <div class="sunset"></div>
+      </div>
+      <div class="overlay-box">
+        <img src="./images/moon.svg" alt="moon" class="moon-svg">
+        <div class="moonrise"></div>
+        <div class="moonset"></div>
+      </div>
+      <div class="overlay-box">
+        <img src="./images/sunglasses.svg" alt="sunglasses" class="sunglasses-svg">
+        <div class="uv-index"></div>
+      </div>
+    </div>
+    
     <main>
-        <div class="location">
-          <h1 class="location-timezone">Timezone</h1>
-          <canvas class="icon" width="128" height="128"></canvas>
+      <!-- Temperature-->
+      <div class="temperature-container">
+        <div class="row">
+          <div class="today">Today</div>
+          <div class="date"></div>
         </div>
-        <!-- Date  -->
-        <div class="date-wrapper">
-        <div class="date"></div>
+        <div class="row">
+          <div class="degree"></div>
+          <div class="degree-symbol">C°</div>
+          <img class="wheater-icon" src="" alt="Wheater icon">
+      </div>
+        <div class="row">
+          <svg class="location-icon" width="2rem" enable-background="new 0 0 395.71 395.71" version="1.1" viewBox="0 0 395.71 395.71" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+
+            <path d="m197.85 0c-75.718 0-137.32 61.609-137.32 137.33 0 72.887 124.59 243.18 129.9 250.39l4.951 6.738c0.579 0.792 1.501 1.255 2.471 1.255 0.985 0 1.901-0.463 2.486-1.255l4.948-6.738c5.308-7.211 129.9-177.5 129.9-250.39 0-75.72-61.61-137.33-137.33-137.33zm0 88.138c27.13 0 49.191 22.062 49.191 49.191 0 27.115-22.062 49.191-49.191 49.191-27.114 0-49.191-22.076-49.191-49.191 0-27.129 22.076-49.191 49.191-49.191z"/>
+          </svg>
+          <div class="location-timezone"></div>
         </div>
-        
-        <div class="temperature">
-          <!-- Degree  -->
-          <div class="degree-section">
-          <h2 class="temperature-degree">4</h2>
-            <span>C</span>
-            </div>
-          
-          <div class="temperature-description">It's cold</div>
+      </div>
+      
+      <!-- Details-->
+      <div class="details-container">
+        <div class="details-container-small 1">
+          <p>Humidity:</p>
+          <div id="humidity"></div>
         </div>
-          </main>
+        <div class="details-container-small 2">
+          <p>Wind:</p>
+          <div id="wind"></div>
+        </div>
+        <div class="details-container-small 3">
+          <p>Pressure:</p>
+          <div id="pressure"></div>
+        </div> 
+      </div>
+
+      <!-- Forecast-->
+      <h2 class="forecast-title">Next 3 days</2>
+        <div class="forecast-container">
+          <div class="forecast-container-small">
+              <img src="" alt="" class="forecast-icon-one">
+              <div class="degree-forecast-one"></div>
+          </div>
+          <div class="forecast-container-small">
+              <img src="" alt="" class="forecast-icon-two">
+              <div class="degree-forecast-two"></div>
+          </div>
+          <div class="forecast-container-small">
+              <img src="" alt="" class="forecast-icon-three">
+              <div class="degree-forecast-three"></div>
+          </div>
+        </div>
+    </main>
+
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
